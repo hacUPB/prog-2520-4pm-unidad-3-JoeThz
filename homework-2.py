@@ -1,0 +1,1 @@
+#Crear una carpeta que se llame reto e ingresarle los 3 problemas y comenzar a hacer la tabla de analisis añadiendo el tipo de variable.

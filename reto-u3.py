@@ -15,19 +15,19 @@
 """
 #Diseñar un programa interactivo en Python que funcione completamente por consola y contenga un **menú principal con cuatro opciones**:
 
-# Problema 1: Calcula la fuerza de sustentación
+# Problema 1: Simulación de consume de combustibe
 
-# Problema 2: Calcula el peso total de un avión
+# Problema 2: Monitoreo de temperatura de motores
 
-# Problema 3: Calcula la aceleración de un avión en despegue
+# Problema 3: Simulación de consumo de combustible en un cohete por etapas.
 
 # Opción 4: Salir del programa
 
 while True:
     print("\n--- MENÚ PRINCIPAL ---")
-    print("1. Problema 1: Calcula la fuerza de sustentación")
-    print("2. Problema 2: Calcula el peso total de un avión")
-    print("3. Problema 3: Calcula la aceleración de un avión en despegue")
+    print("1. Problema 1: Simulación de consume de combustibe")
+    print("2. Problema 2: Monitoreo de temperatura de motores")
+    print("3. Problema 3: Simulación de consumo de combustible en un cohete por etapas.")
     print("4. Salir")
     opcion = input("Elige una opción (1-4): ")
 

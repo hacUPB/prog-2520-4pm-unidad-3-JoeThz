@@ -9,4 +9,4 @@ match modo:
     case _:
      print("Modo no válido")
 
-#Tarea: cambiar el codigo del ejericicio 4 por el modo de match case.
+

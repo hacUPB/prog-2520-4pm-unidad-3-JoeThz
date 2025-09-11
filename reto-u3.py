@@ -37,7 +37,24 @@ while True:
         case "2":
             print("Has elegido el Problema 2.")
         case "3":
-            print("Has elegido el Problema 3.")
+            print("\n--- Simulación de consumo de combustible en cohete ---")
+            cant_etapas = int(input("Ingrese el número de etapas del cohete: "))
+            cant_comb = int(input("Ingrese la cantidad inicial de combustible (m³): "))
+            
+            comb_restante = cant_comb
+            
+            for etapa_actual in range(1, cant_etapas + 1):
+                comb_cons = int(input(f"Ingrese combustible consumido en etapa {etapa_actual} (m³): "))
+                comb_restante -= comb_cons
+                
+                mensaje_etapa = f"Etapa {etapa_actual}: Combustible restante = {comb_restante} m³"
+                print(mensaje_etapa)
+                
+                if comb_restante <= 0:
+                    print("¡Advertencia! El cohete se ha quedado sin combustible")
+                    break
+            
+            input("\nPresione Enter para volver al menú principal...")
         case "4":
             print("Adios")
             break

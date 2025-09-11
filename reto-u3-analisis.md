@@ -18,3 +18,4 @@
 |comb_restante       |cantidad de combustible restante después de cada etapa | int |
 |mensaje_etapa       |mensaje que muestra el combustible restante tras cada etapa | string |
 
+### Usé IA para las varibales de control, preguntandole que me ayudara con los nombres de las variables que necesitaria para el pseudocodigo.

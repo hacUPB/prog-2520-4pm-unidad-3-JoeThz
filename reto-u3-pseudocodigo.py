@@ -47,11 +47,11 @@ while True:
                 comb_cons = int(input(f"Ingrese combustible consumido en etapa {etapa_actual} (m³): "))
                 comb_restante -= comb_cons
                 
-                mensaje_etapa = f"Etapa {etapa_actual}: Combustible restante = {comb_restante} m³"
+                mensaje_etapa = (f"Etapa {etapa_actual}: Combustible restante = {comb_restante} m³")
                 print(mensaje_etapa)
                 
                 if comb_restante <= 0:
-                    print("¡Advertencia! El cohete se ha quedado sin combustible")
+                    print("Advertencia: El cohete se ha quedado sin combustible")
                     break
             
             input("\nPresione Enter para volver al menú principal...")

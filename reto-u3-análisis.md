@@ -23,17 +23,16 @@ Nota: Se uso la IA para pedirle que de redactara el enunciado en base a lo que y
 ### Rúbrica:
 |Requisito	|Cumple (2) Cumple Parcialmente (1) No cumple (0) |	Evidencia (página/tabla/figura/sección) |
 |-----------|-------------------------------------------------|-----------------------------------------|
-|Contexto aeronáutico claro y relevante | 2 | - |
-|Clara definición y clasificación de las variables de entrada, salida, de control e intermedias	|  2  | - |
-|Clara definición de las constantes que se utilizan en el problema	|  2 | - |
-|Ecuación que relaciona adecuadamente las variables del problema	|  1  | - |
-|No es solo cálculo directo	|  2  | - |
-|Al menos un bucle (variable de control, condición de parada)	|  2  | - |
-|Al menos una sentencia condicional significativa |	2 | - |
-|Menú repetitivo hasta “Salir”		| 2 | - |
-|Sin listas, diccionarios, tuplas ni sets |	2   | - |
-|Declaración de uso de IA (si aplica) |	 2   |-|
-
+|Contexto aeronáutico claro y relevante | 2 |reto-u3-analisis.md (enunciado: simulación de combustible en fases de vuelo)  |
+|Clara definición y clasificación de las variables de entrada, salida, de control e intermedias	|  2  |reto-u3-analisis.md (tabla de análisis problema 1) |
+|Clara definición de las constantes que se utilizan en el problema	|  2 |reto-u3-pseudocodigo.py (umbral_seguridad como constante operacional) |
+|Ecuación que relaciona adecuadamente las variables del problema	|  1  |cálculo directo del restante, no se formaliza con una ecuación simbólica |
+|No es solo cálculo directo	|  2  |pseudocódigo: incluye bucle y condicionales |
+|Al menos un bucle (variable de control, condición de parada)	|  2  |for hora in range(1, horas+1) |
+|Al menos una sentencia condicional significativa |	1 |if combustible <= 0, if combustible < umbral_seguridad |
+|Menú repetitivo hasta “Salir”		| 2 |pseudocódigo: while True con opción 4 |
+|Sin listas, diccionarios, tuplas ni sets |	2   |pseudocódigo no usa colecciones |
+|Declaración de uso de IA (si aplica) |	 2   |reto-u3-analisis.md (nota aclarando el apoyo de IA en la formulación del enunciado y umbral) |
 ---
 
 ## 2. Calcula el centro de gravedad de un avión de carga:
@@ -68,16 +67,17 @@ Nota: Se uso la IA para pedirle que de redactara el enunciado en base a lo que y
 ### Rúbrica:
 |Requisito	|Cumple (2) Cumple Parcialmente (1) No cumple (0) |	Evidencia (página/tabla/figura/sección) |
 |-----------|-------------------------------------------------|-----------------------------------------|
-|Contexto aeronáutico claro y relevante | 2 | - |
-|Clara definición y clasificación de las variables de entrada, salida, de control e intermedias	|  2  | - |
-|Clara definición de las constantes que se utilizan en el problema	|  1 | - |
-|Ecuación que relaciona adecuadamente las variables del problema	|  2  | - |
-|No es solo cálculo directo	|  1  | - |
-|Al menos un bucle (variable de control, condición de parada)	|  2  | - |
-|Al menos una sentencia condicional significativa |	1 | - |
-|Menú repetitivo hasta “Salir”		| 2 | - |
-|Sin listas, diccionarios, tuplas ni sets |	2   | - |
-|Declaración de uso de IA (si aplica) |	 2   |-|
+|Contexto aeronáutico claro y relevante | 2 |reto-u3-analisis.md (enunciado sobre vuelo y consumo de combustible)  |
+|Clara definición y clasificación de las variables de entrada, salida, de control e intermedias	|  2  |reto-u3-analisis.md (tabla de análisis del problema 2) |
+|Clara definición de las constantes que se utilizan en el problema	|  2 |reto-u3-pseudocodigo.py (línea umbral_seguridad = (combustible/pesototal)*100) |
+|Ecuación que relaciona adecuadamente las variables del problema	|  2  |pseudocódigo, cálculo del umbral de seguridad con combustible y peso total |
+|No es solo cálculo directo	|  2  |se incluyen bucle, condicionales y decisiones del usuario |
+|Al menos un bucle (variable de control, condición de parada)	|  2  |pseudocódigo: for hora in range(1, horas+1) |
+|Al menos una sentencia condicional significativa |	1 |pseudocódigo: if combustible <= 0, if combustible < umbral_seguridad |
+|Menú repetitivo hasta “Salir”		| 2 |pseudocódigo: while True con opción 4 |
+|Sin listas, diccionarios, tuplas ni sets |	2   |pseudocódigo no usa colecciones |
+|Declaración de uso de IA (si aplica) |	 2   |reto-u3-analisis.md (nota al final de problema sobre ayuda de IA) |
+
 
 
 ## Problema 3: Simulación de consumo de combustible en un cohete por etapas.

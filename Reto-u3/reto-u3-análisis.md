@@ -115,3 +115,104 @@ Nota: Se uso la IA para pedirle que de redactara el enunciado en base a lo que y
 |Menú repetitivo hasta “Salir”		| 2    | reto-u3-pseudocodigo.py (while True, opción 4 para salir) |
 |Sin listas, diccionarios, tuplas ni sets	|	2   | reto-u3-pseudocodigo.py (no se usan colecciones) |
 |Declaración de uso de IA (si aplica)	|	 2   | reto-u3-analisis.py (comentario al final sobre el uso de IA para ayudar) |
+
+## Pseudocodigo
+
+---
+Inicio
+Mientras Verdadero Hacer
+    Mostrar "n--- MENÚ PRINCIPAL ---"
+    Mostrar "1. Problema 1: Cálculo del centro de gravedad."
+    Mostrar "2. Problema 2: Simulación de consumo de combustible en una aeronave."
+    Mostrar"3. Problema 3: Simulación de consumo de combustible en un cohete por etapas."
+    Mostrar"4. Salir"
+
+    Leer opción
+
+    Según opción Hacer
+        Caso "1":
+            Mostrar "Has elegido el Problema 1."
+
+            Leer zonas
+
+            suma_peso = 0
+            suma_peso_posicion = 0
+
+            Para i Desde 1 Hasta zonas Hacer
+                Leer posicion
+                Leer peso
+                suma_peso = suma_peso + peso
+                suma_peso_posicion = suma_peso_posicion + (peso * posicion)
+
+            Si suma_peso = 0 Entonces
+                Mostrar"No se puede calcular el centro de gravedad: el peso total es cero."
+            Sino:
+                CG = suma_peso_posicion / suma_peso
+                Mostrar "El centro de gravedad (CG) calculado es: {CG} metros."
+
+                rango_min = 10
+                rango_max = 25
+
+                Si CG < rango_min or CG > rango_max Entonces
+                    Mostrar"¡Alerta! El CG está fuera del rango permitido."
+                Sino:
+                    Mostrar "El CG está dentro del rango seguro para operar la aeronave"
+
+        Caso "2":
+            Mostrar "Has elegido el Problema 2."
+
+            Leer combustible
+            Leer horas
+            Leer pesototal
+            umbral_seguridad = (combustible/pesototal)*100
+
+            Para hora Desde 1 Hasta horas Hacer
+                Leer consumo
+                combustible = combustible - consumo
+                Mostrar "Después de la hora {hora}, quedan {combustible} litros de combustible."
+                Si combustible <= 0 Entonces
+                    Mostrar "¡Emergencia! El avión se ha quedado sin combustible. Intente atterizaje de emerjencia en modo planeo."
+                    Salir del Bucle
+                Fin Si
+
+                Si combustible < umbral_seguridad Entonces
+                    Mostrar "Cuidado!! El combustible está por debajo del umbral de seguridad."
+                    Leer emergencia
+                    Si emergencia = "SI" Entonces
+                        Mostrar "Aterrizaje de emergencia iniciado."
+                        Salir del Bucle
+                    Fin Si
+                Fin si
+            Fin Para    
+
+            Sino Entonces
+                Mostrar"Vuelo completado, Felicitaciones piloto :)"
+
+        Caso "3":
+            Mostrar "Has elegido el Problema 3."
+
+            Leer cant_etapas
+            Leer cant_comb
+            
+            comb_restante = cant_comb
+            
+            Para etapa_actual Desde 1 Hasta cant_etapas Hacer
+                Leer comb_cons
+                comb_restante = com_restante - comb_cons
+                
+                Mostrar "Etapa ", etapa_actual, ": Combustible restante = ", comb_restante, "m³"
+                print(mensaje_etapa)
+                
+                Si comb_restante <= 0:
+                    Mostrar Advertencia: El cohete se ha quedado sin combustible"
+                    Salir del Bucle
+                Fin si
+            Fin Para
+
+        Caso "4":
+            Mostrar "Adios"
+            Salir del Programa
+        Otro Caso:
+            Mostrar "Opción inválida. Por favor, elige una opción del 1 al 4."
+Fin
+---

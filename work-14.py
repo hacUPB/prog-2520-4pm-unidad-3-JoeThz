@@ -60,8 +60,6 @@ def encabezado(mensaje):
 eleccion = menu()
 print(f"Opción elejida: {eleccion}")
 
-def 
-
 match(eleccion):
     case 1:
         print("Nombre: Joe")

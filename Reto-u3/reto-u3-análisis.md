@@ -1,0 +1,218 @@
+## 1. Simulación de consumo de combustible:
+Un avión inicia su vuelo con una cantidad determinada de combustible (en litros). El consumo de combustible por hora puede variar según la fase del vuelo (despegue, crucero, aterrizaje).
+Solicita al usuario la cantidad inicial de combustible y el número total de horas de vuelo. Para cada hora, pide el consumo correspondiente y muestra cuánto combustible queda después de cada hora. Si el combustible restante es menor a un umbral de seguridad (por ejemplo, 500 litros), alerta al usuario y pregunta si desea realizar un aterrizaje de emergencia.
+
+### Tabla de Análisis:
+| Variable de entrada | Descrición | Tipo de variable |
+|---------------------|------------|------------------|
+| Combustible | La cantidad inicial de combustible en litros | Variable tipo int |
+| Gasto | La cantidad de combustible que se consume cada hora | Variable tipo int |
+| Duración | Las horas que dura el vuelo | Variable tipo int |
+
+| Variable de salida | Descrición | Tipo de variable |
+|---------------------|------------|------------------|
+| Restante | La cantidad de combustible que queda en el avión durante el vuelo, en litros | Variable tipo int |
+| Alerta | Mensaje de alerta si el combustible está bajo el umbral de seguridad | Variable tipo str |
+
+| Variable de control | Descrición | Tipo de variable |
+|---------------------|------------|------------------|
+| umbral_seguridad | Umbral de seguridad para el combustible restante | Variable tipo float/int |
+
+Nota: Se uso la IA para pedirle que de redactara el enunciado en base a lo que yo le dije que queria (Un ejercicio que se pudiera hacer con bucle en python sobre ingenieria aeronautica y fuera control de combustible). Y para que me ayudara a sacar la formula para el umbral de seguridad con solo el peso total y el combustible.
+
+### Rúbrica:
+|Requisito	|Cumple (2) Cumple Parcialmente (1) No cumple (0) |	Evidencia (página/tabla/figura/sección) |
+|-----------|-------------------------------------------------|-----------------------------------------|
+|Contexto aeronáutico claro y relevante | 2 |reto-u3-analisis.md (enunciado: simulación de combustible en fases de vuelo)  |
+|Clara definición y clasificación de las variables de entrada, salida, de control e intermedias	|  2  |reto-u3-analisis.md (tabla de análisis problema 1) |
+|Clara definición de las constantes que se utilizan en el problema	|  2 |reto-u3-pseudocodigo.py (umbral_seguridad como constante operacional) |
+|Ecuación que relaciona adecuadamente las variables del problema	|  1  |cálculo directo del restante, no se formaliza con una ecuación simbólica |
+|No es solo cálculo directo	|  2  |pseudocódigo: incluye bucle y condicionales |
+|Al menos un bucle (variable de control, condición de parada)	|  2  |for hora in range(1, horas+1) |
+|Al menos una sentencia condicional significativa |	1 |if combustible <= 0, if combustible < umbral_seguridad |
+|Menú repetitivo hasta “Salir”		| 2 |pseudocódigo: while True con opción 4 |
+|Sin listas, diccionarios, tuplas ni sets |	2   |pseudocódigo no usa colecciones |
+|Declaración de uso de IA (si aplica) |	 2   |reto-u3-analisis.md (nota aclarando el apoyo de IA en la formulación del enunciado y umbral) |
+---
+
+## 2. Calcula el centro de gravedad de un avión de carga:
+Un avión tiene varias zonas de carga distribuidas a lo largo de su fuselaje. Con el número de zonas de carga, la posición de cada zona respecto al punto de referencia (en metros) y el peso cargado en cada zona (en kilogramos). Calcula el centro de gravedad (CG) de la aeronave con la fórmula:    CG = (Σ (peso × posición)) / Σ peso
+Al final, muestra el valor del CG y alerta si está fuera del rango permitido para la operación segura del avión.
+
+### Tabla de Análisis:
+
+| Variable de entrada | Descrición | Tipo de variable |
+|---------------------|------------|------------------|
+| Zonas | Número de zonas de carga del avión | Variable tipo int |
+| Posición | Posición de cada zona respecto al punto de referencia | Variable tipo int |
+| Peso | Peso cargado en cada zona | Variable tipo int |
+
+| Variable de salida | Descrición | Tipo de variable |
+|---------------------|------------|------------------|
+| CG | Centro de gravedad calculado de la aeronave | Variable tipo float |
+| Alerta | Mensaje si el CG está fuera del rango permitido | Variable tipo str |
+
+| Variable de control | Descrición | Tipo de variable |
+|---------------------|------------|------------------|
+| CG | Centro de gravedad calculado de la aeronave | Variable tipo float |
+| Alerta | Mensaje si el CG está fuera del rango permitido | Variable tipo str |
+
+| Constantes | Descrición | 
+|---------------------|------------|
+| rango_min| Rango minimo del centro de gravedad |
+| rango_max | Rango maximo del CG |
+
+Nota: Se uso la IA para pedirle que de redactara el enunciado en base a lo que yo le dije que queria (Un ejercicio que se pudiera hacer con bucle en python sobre ingenieria aeronautica y fuera sobre el centro de gravedad de una aeronave).
+
+### Rúbrica:
+|Requisito	|Cumple (2) Cumple Parcialmente (1) No cumple (0) |	Evidencia (página/tabla/figura/sección) |
+|-----------|-------------------------------------------------|-----------------------------------------|
+|Contexto aeronáutico claro y relevante | 2 |reto-u3-analisis.md (enunciado sobre vuelo y consumo de combustible)  |
+|Clara definición y clasificación de las variables de entrada, salida, de control e intermedias	|  2  |reto-u3-analisis.md (tabla de análisis del problema 2) |
+|Clara definición de las constantes que se utilizan en el problema	|  2 |reto-u3-pseudocodigo.py (línea umbral_seguridad = (combustible/pesototal)*100) |
+|Ecuación que relaciona adecuadamente las variables del problema	|  2  |pseudocódigo, cálculo del umbral de seguridad con combustible y peso total |
+|No es solo cálculo directo	|  2  |se incluyen bucle, condicionales y decisiones del usuario |
+|Al menos un bucle (variable de control, condición de parada)	|  2  |pseudocódigo: for hora in range(1, horas+1) |
+|Al menos una sentencia condicional significativa |	1 |pseudocódigo: if combustible <= 0, if combustible < umbral_seguridad |
+|Menú repetitivo hasta “Salir”		| 2 |pseudocódigo: while True con opción 4 |
+|Sin listas, diccionarios, tuplas ni sets |	2   |pseudocódigo no usa colecciones |
+|Declaración de uso de IA (si aplica) |	 2   |reto-u3-analisis.md (nota al final de problema sobre ayuda de IA) |
+
+
+
+## Problema 3: Simulación de consumo de combustible en un cohete por etapas.
+ Solicita al usuario el número de etapas del cohete. Por cada etapa, pide la cantidad de combustible consumido y muestra el combustible restante después de cada etapa usando un bucle.
+
+ ### Tabla de Análisis:
+| Variable de entrada | Descripción | Tipo de variable |
+|---------------------|-------------|------------------|
+|cant_etapas          |número de etapas que tiene el cohete | int |
+|cant_comb            |cantidad de combustible en metros cubicos | int |
+|comb_cons            |cantidad de combustible que se consume en cada etapa | int |
+
+| Variable de control | Descripción | Tipo de variable |
+|---------------------|-------------|------------------|
+|etapa_actual         |contador de la etapa actúal en el bucle | int |
+|comb_restante        |combustible restante después de cada etapa | int |
+
+| Variable de salida | Descripción | Tipo de variable |
+|--------------------|-------------|------------------|
+|comb_restante       |cantidad de combustible restante después de cada etapa | int |
+|mensaje_etapa       |mensaje que muestra el combustible restante tras cada etapa | string |
+
+### Usé IA para las varibales de control, preguntandole que me ayudara con los nombres de las variables que necesitaria para el pseudocodigo.
+
+### Rúbrica
+|Requisito	|Cumple 2 Parcialmente 1 No cumple 0 |	Evidencia (página/tabla/figura/sección) |
+|-------------------|-------------------------|----------------------------------------|
+|Contexto aeronáutico claro y relevante |2 | reto-u3-pseudocodigo.py (comentarios y menú), reto-u3-analisis.md |
+|Clara definición y clasificación de las variables de entrada, salida, de control e intermedias		|  2  | reto-u3-analisis.md (tabla de análisis) |
+|Clara definición de las constantes que se utilizan en el problema		|   2 | reto-u3-analisis.md (tabla, aunque no hay constantes explícitas, el combustible inicial puede considerarse constante por etapa) |
+|Ecuación que relaciona adecuadamente las variables del problema	|  2  | reto-u3-pseudocodigo.py (comb_restante = cant_comb - sum(comb_cons)) |
+|No es solo cálculo directo		|  1  | reto-u3-pseudocodigo.py (hay bucle y condicional, pero el cálculo es directo) |
+|Al menos un bucle (variable de control, condición de parada)	|  2  | reto-u3-pseudocodigo.py (for etapa_actual in range) |
+|Al menos una sentencia condicional significativa	|	2   | reto-u3-pseudocodigo.py (if comb_restante <= 0) |
+|Menú repetitivo hasta “Salir”		| 2    | reto-u3-pseudocodigo.py (while True, opción 4 para salir) |
+|Sin listas, diccionarios, tuplas ni sets	|	2   | reto-u3-pseudocodigo.py (no se usan colecciones) |
+|Declaración de uso de IA (si aplica)	|	 2   | reto-u3-analisis.py (comentario al final sobre el uso de IA para ayudar) |
+
+## Pseudocodigo
+
+---
+Inicio
+Mientras Verdadero Hacer
+    Mostrar "n--- MENÚ PRINCIPAL ---"
+    Mostrar "1. Problema 1: Cálculo del centro de gravedad."
+    Mostrar "2. Problema 2: Simulación de consumo de combustible en una aeronave."
+    Mostrar"3. Problema 3: Simulación de consumo de combustible en un cohete por etapas."
+    Mostrar"4. Salir"
+
+    Leer opción
+
+    Según opción Hacer
+        Caso "1":
+            Mostrar "Has elegido el Problema 1."
+
+            Leer zonas
+
+            suma_peso = 0
+            suma_peso_posicion = 0
+
+            Para i Desde 1 Hasta zonas Hacer
+                Leer posicion
+                Leer peso
+                suma_peso = suma_peso + peso
+                suma_peso_posicion = suma_peso_posicion + (peso * posicion)
+
+            Si suma_peso = 0 Entonces
+                Mostrar"No se puede calcular el centro de gravedad: el peso total es cero."
+            Sino:
+                CG = suma_peso_posicion / suma_peso
+                Mostrar "El centro de gravedad (CG) calculado es: {CG} metros."
+
+                rango_min = 10
+                rango_max = 25
+
+                Si CG < rango_min or CG > rango_max Entonces
+                    Mostrar"¡Alerta! El CG está fuera del rango permitido."
+                Sino:
+                    Mostrar "El CG está dentro del rango seguro para operar la aeronave"
+
+        Caso "2":
+            Mostrar "Has elegido el Problema 2."
+
+            Leer combustible
+            Leer horas
+            Leer pesototal
+            umbral_seguridad = (combustible/pesototal)*100
+
+            Para hora Desde 1 Hasta horas Hacer
+                Leer consumo
+                combustible = combustible - consumo
+                Mostrar "Después de la hora {hora}, quedan {combustible} litros de combustible."
+                Si combustible <= 0 Entonces
+                    Mostrar "¡Emergencia! El avión se ha quedado sin combustible. Intente atterizaje de emerjencia en modo planeo."
+                    Salir del Bucle
+                Fin Si
+
+                Si combustible < umbral_seguridad Entonces
+                    Mostrar "Cuidado!! El combustible está por debajo del umbral de seguridad."
+                    Leer emergencia
+                    Si emergencia = "SI" Entonces
+                        Mostrar "Aterrizaje de emergencia iniciado."
+                        Salir del Bucle
+                    Fin Si
+                Fin si
+            Fin Para    
+
+            Sino Entonces
+                Mostrar"Vuelo completado, Felicitaciones piloto :)"
+
+        Caso "3":
+            Mostrar "Has elegido el Problema 3."
+
+            Leer cant_etapas
+            Leer cant_comb
+            
+            comb_restante = cant_comb
+            
+            Para etapa_actual Desde 1 Hasta cant_etapas Hacer
+                Leer comb_cons
+                comb_restante = com_restante - comb_cons
+                
+                Mostrar "Etapa ", etapa_actual, ": Combustible restante = ", comb_restante, "m³"
+                print(mensaje_etapa)
+                
+                Si comb_restante <= 0:
+                    Mostrar Advertencia: El cohete se ha quedado sin combustible"
+                    Salir del Bucle
+                Fin si
+            Fin Para
+
+        Caso "4":
+            Mostrar "Adios"
+            Salir del Programa
+        Otro Caso:
+            Mostrar "Opción inválida. Por favor, elige una opción del 1 al 4."
+Fin
+---
